@@ -5,3 +5,5 @@ environment:
 
 dev_dependencies:
   melos: 4.1.0
+  pubspec_dependency_sorter:
+    git: https://github.com/bluecloudy/pubspec-dependency-sorter.git

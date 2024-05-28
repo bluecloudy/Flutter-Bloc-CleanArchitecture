@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 import '../../app.dart';
 
-class RounedRectangleShimmer extends StatelessWidget {
-  const RounedRectangleShimmer({
+class RoundedRectangleShimmer extends StatelessWidget {
+  const RoundedRectangleShimmer({
     this.width,
     this.height,
     super.key,
