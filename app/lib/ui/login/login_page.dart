@@ -65,7 +65,7 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
                         ? () => bloc.add(const LoginButtonPressed())
                         : null,
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(AppColors.current.primaryColor
+                      backgroundColor: WidgetStateProperty.all(AppColors.current.primaryColor
                           .withOpacity(state.isLoginButtonEnabled ? 1 : 0.5)),
                     ),
                     child: Text(
@@ -79,7 +79,7 @@ class _LoginPageState extends BasePageState<LoginPage, LoginBloc> {
               ElevatedButton(
                 onPressed: () => bloc.add(const FakeLoginButtonPressed()),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(AppColors.current.primaryColor),
+                  backgroundColor: WidgetStateProperty.all(AppColors.current.primaryColor),
                 ),
                 child: Text(
                   S.current.fakeLogin,

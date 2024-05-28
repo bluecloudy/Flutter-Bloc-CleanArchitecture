@@ -224,12 +224,11 @@ class AppNavigatorImpl extends AppNavigator with LogMixin {
 
     return m.showDialog<T>(
       context: useRootNavigator ? _rootRouterContext : _currentTabContextOrRootContext,
-      builder: (_) => m.WillPopScope(
-        onWillPop: () async {
+      builder: (_) => m.PopScope(
+        canPop: true,
+        onPopInvoked: (didPop) {
           logD('Dialog $appPopupInfo dismissed');
           _shownPopups.remove(appPopupInfo);
-
-          return Future.value(true);
         },
         child: _appPopupInfoMapper.map(appPopupInfo, this),
       ),
@@ -266,12 +265,11 @@ class AppNavigatorImpl extends AppNavigator with LogMixin {
         m.Animation<double> animation1,
         m.Animation<double> animation2,
       ) =>
-          m.WillPopScope(
-        onWillPop: () async {
+          m.PopScope(
+        canPop: true,
+        onPopInvoked: (didPop) {
           logD('Dialog $appPopupInfo dismissed');
           _shownPopups.remove(appPopupInfo);
-
-          return Future.value(true);
         },
         child: _appPopupInfoMapper.map(appPopupInfo, this),
       ),

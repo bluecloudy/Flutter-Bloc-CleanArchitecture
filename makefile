@@ -220,3 +220,11 @@ pub_sync:
 
 dart_fix:
 	dart fix --apply
+
+sort_dependencies:
+	dart run pubspec_dependency_sorter ./app
+	dart run pubspec_dependency_sorter ./data
+	dart run pubspec_dependency_sorter ./shared
+	dart run pubspec_dependency_sorter ./domain
+	dart run pubspec_dependency_sorter ./resources
+	dart run pubspec_dependency_sorter ./initializer
